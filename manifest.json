@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "YouTubeConsistentKey",
+    "description": "It's stupid how arrow key can seek or turn volume up so with this extension adjust volume, seek, and pause more consistently.",
+    "version": "1.0",
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "48": "icon.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icon.png"
+      }
+    }
+  }
+  
